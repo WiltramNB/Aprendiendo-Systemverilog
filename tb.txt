@@ -1,0 +1,8 @@
+1. ¿Cuántas entradas tiene?     → declarar esas señales como logic
+2. ¿Cuántas salidas tiene?      → declarar esas señales como logic
+3. Instanciar con dut(...)      → conectar señal por señal
+4. ¿Es combinacional?           → probar todas las combinaciones de entrada
+   ¿Es secuencial?              → probar secuencias de clock + reset + datos
+5. $display para ver resultados → $finish para terminar
+
+.\run.bat

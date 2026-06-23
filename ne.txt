@@ -1,0 +1,13 @@
+Ejecutar en la terminal raíz:
+    .\ne.bat
+
+Esto pregunta:
+    Nombre del ejercicio: EjemploArchivo
+    Carpeta destino:01_combinacional (ejemplo)
+
+
+Crea automaticamente:
+01_combinacional\EjemploArchivo\
+    ├── EjemploArchivo.sv
+    ├── EjemploArchivo_tb.sv
+    └── run.bat

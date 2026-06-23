@@ -1,0 +1,46 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2009.vpi";
+S_000001b2b5dd60a0 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_000001b2b5dd6230 .scope module, "not1_tb" "not1_tb" 3 1;
+ .timescale 0 0;
+v000001b2b5dd6460_0 .var "a", 0 0;
+v000001b2b5d4bcb0_0 .net "y", 0 0, L_000001b2b5d4da50;  1 drivers
+S_000001b2b5da27f0 .scope module, "dut" "not1" 3 5, 4 1 0, S_000001b2b5dd6230;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "y";
+L_000001b2b5d4da50 .functor NOT 1, v000001b2b5dd6460_0, C4<0>, C4<0>, C4<0>;
+v000001b2b5d4d9b0_0 .net "a", 0 0, v000001b2b5dd6460_0;  1 drivers
+v000001b2b5dd63c0_0 .net "y", 0 0, L_000001b2b5d4da50;  alias, 1 drivers
+    .scope S_000001b2b5dd6230;
+T_0 ;
+    %vpi_call/w 3 8 "$display", "=== Test: not ===" {0 0 0};
+    %vpi_call/w 3 9 "$display", "a | y" {0 0 0};
+    %vpi_call/w 3 10 "$display", "--+--" {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001b2b5dd6460_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call/w 3 12 "$display", "%b | %b", v000001b2b5dd6460_0, v000001b2b5d4bcb0_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001b2b5dd6460_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call/w 3 13 "$display", "%b | %b", v000001b2b5dd6460_0, v000001b2b5d4bcb0_0 {0 0 0};
+    %vpi_call/w 3 15 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "-";
+    "not1_tb.sv";
+    "not1.sv";
