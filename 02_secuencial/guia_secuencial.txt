@@ -1,0 +1,31 @@
+CLOCKS-------------------------
+logic clk;
+
+initial clk = 0;
+always #5 clk = ~clk;
+
+Esto genera:
+clk: 0_____1‾‾‾‾‾0_____1‾‾‾‾‾0_____
+     |←5ns→|←5ns→|
+     |←  10ns  →|
+
+TESTBENCHES--------------------
+En combinacional: aplico entrada → leo salida.
+En secuencial: aplico entrada → espero flanco → leo salida.
+
+aplicar D    esperar flanco    leer Q
+   ↓               ↓              ↓
+d = 4'hA;    @(posedge clk);   // Q debe ser A recién aquí
+
+1. Generar el clock primero
+         initial clk = 0;
+         always #5 clk = ~clk;
+
+2. Aplicar D antes del flanco, leer Q después
+         d = valor;
+         @(posedge clk); #1;
+         // recién acá leer q
+
+3. El #1 después del flanco es para
+   dejar estabilizar la salida antes
+   de leer o imprimir

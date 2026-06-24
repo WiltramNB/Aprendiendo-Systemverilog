@@ -24,6 +24,8 @@ echo.>> %CARPETA%\%NOMBRE%\%NOMBRE%_tb.sv
 echo     integer i; >> %CARPETA%\%NOMBRE%\%NOMBRE%_tb.sv
 echo     initial begin >> %CARPETA%\%NOMBRE%\%NOMBRE%_tb.sv
 echo         $display("=== Test: %NOMBRE% ==="); >> %CARPETA%\%NOMBRE%\%NOMBRE%_tb.sv
+echo         $display("a b | y1 y2 y3 y4 y5"); >> %CARPETA%\%NOMBRE%\%NOMBRE%_tb.sv
+echo         $display("----+---------------"); >> %CARPETA%\%NOMBRE%\%NOMBRE%_tb.sv
 echo         // aplica estimulos aqui >> %CARPETA%\%NOMBRE%\%NOMBRE%_tb.sv
 echo         $finish; >> %CARPETA%\%NOMBRE%\%NOMBRE%_tb.sv
 echo     end >> %CARPETA%\%NOMBRE%\%NOMBRE%_tb.sv
