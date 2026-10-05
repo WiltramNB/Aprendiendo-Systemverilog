@@ -1,6 +1,6 @@
 # Entorno de Aprendizaje y Desarrollo en SystemVerilog
 
-Este repositorio funciona como un "cuaderno" de estudio interactivo y automatizado para el diseño, simulación y verificación de circuitos digitales utilizando **SystemVerilog**. 
+Este repositorio funciona como un "cuaderno" de estudio interactivo y automatizado para el diseño, simulación y verificación de circuitos digitales utilizando **SystemVerilog**.
 
 El proyecto incluye scripts personalizados en Batch (`.bat`) para agilizar la creación de módulos (arquitectura + testbench) y ejecutar simulaciones rápidamente, eliminando la fricción de configurar archivos manualmente para cada ejercicio.
 
@@ -34,13 +34,13 @@ raiz-del-proyecto
  ┣ taller_dsp         # Diseños orientados a Digital Signal Processing
  ┣ ne.bat             # Script principal para generar nuevos módulos
  ┗ ne.txt             # Guía rápida de uso del script
+```
 
-
-# Flujo de Trabajo (Cómo Funciona)
+## Flujo de Trabajo (Cómo Funciona)
 
 El núcleo de este repositorio es la **automatización**. No necesitas crear archivos en blanco manualmente.
 
-## 1. Crear un nuevo ejercicio
+### 1. Crear un nuevo ejercicio
 
 En la terminal integrada de VSCode (en la raíz del proyecto), ejecuta el script de creación:
 
@@ -60,7 +60,7 @@ Automáticamente se generará una carpeta aislada con la siguiente estructura ba
 - `nombre_del_ejercicio_tb.sv`: Plantilla configurada para el Testbench.
 - `run.bat`: Script local preconfigurado para compilar y simular este circuito en específico.
 
-## 2. Simular un circuito
+### 2. Simular un circuito
 
 Cada carpeta generada es **100% independiente**. Una vez que hayas escrito tu código y testbench, navega hasta la carpeta del ejercicio y ejecuta su simulador local:
 
